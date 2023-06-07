@@ -1,0 +1,24 @@
+version: '3'  # Specify the version of Docker Compose
+
+services:
+  web:  # Name of the service
+    build: ./web  # Build context for the service (path to the Dockerfile)
+    ports:
+      - '80:80'  # Forward port 80 of the container to port 80 on the host
+    volumes:
+      - ./web:/app  # Mount the local './web' directory to '/app' in the container
+    depends_on:
+      - db  # Specify that the 'web' service depends on the 'db' service
+
+  db:  # Name of the service
+    image: mysql:latest  # Use the latest MySQL image from Docker Hub
+    environment:
+      - MYSQL_ROOT_PASSWORD=root  # Set the password for the root user
+      - MYSQL_DATABASE=test  # Set the name of the default database
+      - MYSQL_USER=root # Set the username for the non-root user
+      - MYSQL_PASSWORD=  # Set the password for the non-root user
+    volumes:
+      - mysql_data:/var/lib/mysql  # Mount a volume for persistent data storage
+
+volumes:
+  mysql_data:  # Name of the volume for MySQL data
