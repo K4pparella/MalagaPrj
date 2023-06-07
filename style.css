@@ -1,0 +1,10 @@
+body{
+    background-image: url(https://rare-gallery.com/uploads/posts/1091102-black-abstract-purple-blue-pattern-texture-circle-magenta-material-design-line-mesh-textile-flooring.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+P{
+    padding: 8px;
+}
