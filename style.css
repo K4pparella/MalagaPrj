@@ -5,6 +5,13 @@ body{
     height: 100vh;
 }
 
+.radiowrapper{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+}
+
 P{
     padding: 8px;
 }

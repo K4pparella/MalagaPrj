@@ -28,15 +28,32 @@
                     <label for="name">Tu nombre</label>
                     
                 </div>
-                <input type="radio" id="VIDEOJUEGOS" name="categoria" value="VIDEOJUEGOS">
-                <label for="html">VIDEOJUEGOS</label><br>
-                <input type="radio" id="ALIMENTOS" name="categoria" value="ALIMENTOS">
-                <label for="css">ALIMENTOS</label><br>
-                <input type="radio" id="ARTE" name="categoria" value="ARTE">
-                <label for="javascript">ARTE</label> 
-                <input type="radio" id="GEOGRAFIA" name="categoria" value="GEOGRAFIA">
-                <label for="javascript">GEOGRAFIA</label>
-
+                <div class="radiowrapper">
+                    <fieldset>
+                        <legend>SELECCIONA UNA CATEGORIA:</legend>
+                    
+                        <div>
+                          <input type="radio" id="videog" name="drone" value="VIDEOJUEGOS"
+                                 checked>
+                          <label for="VIDEOJUEGOS">VIDEOJUEGOS</label>
+                        </div>
+                    
+                        <div>
+                          <input type="radio" id="alimentos" name="drone" value="ALIMENTOS">
+                          <label for="ALIMENTOS">ALIMENTOS</label>
+                        </div>
+                    
+                        <div>
+                          <input type="radio" id="alimentos" name="drone" value="ARTE">
+                          <label for="ARTE">ARTE</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="geografia" name="drone" value="GEOGRAFIA">
+                            <label for="GEOGRAFIA">GEOGRAFIA</label>
+                          </div>
+                    </fieldset>
+                    
+                </div>
                 <div>
                     <p class="white-text green">REGLAS DE LA PRUEBA:</p>
                     <p class="black-text white ">1. LAS PREGUNTAS NO SE PUEDEN SALTAR</p>
