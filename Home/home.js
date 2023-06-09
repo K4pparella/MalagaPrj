@@ -9,7 +9,7 @@ let category = null;
  * @return {*} 
  */
 function sendPostRequest() {
-    const username = document.getElementById("username").value;
+    const username = document.getElementById("name").value;
     const category = category;
 
     if (username === "" || category === "") {
@@ -50,19 +50,19 @@ function updateText(a){
     switch(a){
         case 'videojuegos':
             document.getElementById("selectionText").innerHTML = "Has seleccionado: Videojuegos";
-            category = "videogames";
+            category = "VIDEOGAMES";
             break;
         case 'arte':
             document.getElementById("selectionText").innerHTML = "Has seleccionado: Arte";
-            category = "art";
+            category = "ART";
             break;
         case 'geografia':
             document.getElementById("selectionText").innerHTML = "Has seleccionado: Geografia";
-            category = "geography";
+            category = "GEOGRAPHY";
             break;
         case 'alimentos':
             document.getElementById("selectionText").innerHTML = "Has seleccionado: Alimentos";
-            category = "foods";
+            category = "FOODS";
             break;
     }
 }
