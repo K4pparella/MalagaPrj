@@ -9,22 +9,20 @@ let category = null;
  * @return {*} 
  */
 function sendPostRequest() {
-    const name = document.getElementById("name").value;
-    const email = category;
-    const age = 12;
+    const username = document.getElementById("username").value;
+    const category = category;
 
-    if (name === "" || email === "" || age === "") {
+    if (username === "" || category === "") {
         console.log("ERROR: Not all fields are completed");
         return;
     }
 
-    const customer = {
-        name: name,
-        email: email,
-        age: parseInt(age)
+    const player = {
+        username = name;
+        category = category;
     };
 
-    fetch("http://localhost:8080/api/customers", {
+    fetch("http://localhost:8080/login", {
         method: "POST",
         body: JSON.stringify(customer),
         headers: {
@@ -52,19 +50,19 @@ function updateText(a){
     switch(a){
         case 'videojuegos':
             document.getElementById("selectionText").innerHTML = "Has seleccionado: Videojuegos";
-            category = "videojuegos";
+            category = "videogames";
             break;
         case 'arte':
             document.getElementById("selectionText").innerHTML = "Has seleccionado: Arte";
-            category = "arte";
+            category = "art";
             break;
         case 'geografia':
             document.getElementById("selectionText").innerHTML = "Has seleccionado: Geografia";
-            category = "geografia";
+            category = "geography";
             break;
         case 'alimentos':
             document.getElementById("selectionText").innerHTML = "Has seleccionado: Alimentos";
-            category = "alimentos";
+            category = "foods";
             break;
     }
 }
