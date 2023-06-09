@@ -9,8 +9,7 @@ let category = null;
  * @return {*} 
  */
 function sendPostRequest() {
-    const username = document.getElementById("name").value;
-    const category = category;
+    let username = document.getElementById("name").value;
 
     if (username === "" || category === "") {
         console.log("ERROR: Not all fields are completed");
