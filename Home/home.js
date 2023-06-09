@@ -18,20 +18,20 @@ function sendPostRequest() {
     }
 
     const player = {
-        username = name;
-        category = category;
+        username,
+        category
     };
 
-    fetch("http://localhost:8080/login", {
+    fetch("http://localhost:8080/api/login", {
         method: "POST",
-        body: JSON.stringify(customer),
+        body: JSON.stringify(player),
         headers: {
             "Content-type": "application/json"
         }
     })
         .then((response) => {
             if (!response.ok) {
-                throw new Error("Network response was not ok");
+                throw new Error("USERNAME ALREADY EXISTS");
             }
         })
         .then((json) => {
