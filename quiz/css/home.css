@@ -1,0 +1,13 @@
+*{
+    background-color: blueviolet;
+}
+
+body{
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+P{
+    padding: 8px;
+}

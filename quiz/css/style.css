@@ -1,0 +1,19 @@
+.text {
+   font-family: "Ubuntu"; 
+}
+
+.title {
+    font-size: 40px;
+}
+
+.paragraph {
+    font-size: 20px;
+}
+
+.white {
+    color: white;
+}
+
+.black{
+    color:black;
+}
