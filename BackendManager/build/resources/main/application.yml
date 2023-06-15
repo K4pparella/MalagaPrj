@@ -1,0 +1,23 @@
+server:
+  address: localhost
+  port: 8085
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: root
+    password: 3003
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: test
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  main:
+    web-application-type: servlet
