@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Question</title>
+</head>
+<body>
+<h1>Insert Question</h1>
+
+<form id="questionForm">
+    <label for="category">Category:</label>
+    <select id="category" name="category">
+        <option value="ART">Art</option>
+        <option value="FOODS">Foods</option>
+        <option value="VIDEOGAMES">Video Games</option>
+        <option value="GEOGRAPHY">Geography</option>
+    </select><br><br>
+
+    <label for="question">Question:</label>
+    <input type="text" id="question" name="question"><br><br>
+
+    <label for="option1">Option 1:</label>
+    <input type="text" id="option1" name="option1"><br><br>
+
+    <label for="option2">Option 2:</label>
+    <input type="text" id="option2" name="option2"><br><br>
+
+    <label for="option3">Option 3:</label>
+    <input type="text" id="option3" name="option3"><br><br>
+
+    <label for="option4">Option 4:</label>
+    <input type="text" id="option4" name="option4"><br><br>
+
+    <label for="answer">Correct Answer:</label>
+    <input type="text" id="answer" name="answer"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    document.getElementById('questionForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var category = document.getElementById('category').value;
+        var question = document.getElementById('question').value;
+        var option1 = document.getElementById('option1').value;
+        var option2 = document.getElementById('option2').value;
+        var option3 = document.getElementById('option3').value;
+        var option4 = document.getElementById('option4').value;
+        var answer = document.getElementById('answer').value;
+
+        var optionList = [option1, option2, option3, option4];
+
+        var questionData = {
+            categoryID: category,
+            question: question,
+            optionList: optionList,
+            answer: answer
+        };
+
+        fetch("http://217.182.253.177:8085/question/insert", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(questionData)
+        })
+            .then(function(response) {
+                if (response.ok) {
+                    alert('Question inserted successfully!');
+                    document.getElementById('questionForm').reset();
+                } else {
+                    alert('Failed to insert question.');
+                }
+            })
+            .catch(function(error) {
+                console.log('Error:', error);
+                alert('An error occurred while inserting the question.');
+            });
+    });
+</script>
+</body>
+</html>
