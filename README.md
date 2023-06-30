@@ -1,10 +1,9 @@
 # MalagaProject
 ## Introduction
-This is our project.
-It's a videogame like Kahoot, but simpler.
-In the home page you can chose a category between art, videogames, geography and food. The user has to choose a category and type his username.
+This is our project, a videogame like Kahoot, but simpler.
+In the home page the user has to enter his username and choose a category between art, videogames, geography and food.
 Then he will need to click the "start" button and he will be redirected to the game page, where will be shown random questions regarding the selected category.
-After answering the questions there will be an "Award page" where the score will be displayed, there will be two other buttons, one to go to home, while the other one to see the answer to the questions with explanations.
+After answering ten questions there will be an "Award page" where the score will be displayed, there will be two other buttons, one to return to the home page, while the other one to see the correct answer (with explanation) to the questions.
 
 ## Versions
 Our project has 2 version:
@@ -43,7 +42,7 @@ Nobody of us have never worked with HTTP requests and databases, despite that we
 
 
 ## The server now
-The server now hosts the second version that doesn't work, to exchange the second version version with the second one you have to only to substitute all files in:
+The server now hosts the second version that doesn't work, to exchange the second version with the first one you have to substitute all files in:
 
 > /var/www/game/  _(here there is the second version now)_
 
