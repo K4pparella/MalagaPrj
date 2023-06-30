@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./Home/materialize.css">
+    <title>MalagaQuizGame</title>
+    <link rel="stylesheet" href="./Home/index.css">
+
+</head>
+
+<body>
+    <script src="./Home/home.js"></script>
+    <nav class="nav-wrapper black">
+        <div class="container">
+            <a class="brand-logo center">PRUEBA</a>
+        </div>
+    </nav>
+
+    <section class="container section">
+        <div class="row">
+            <div class="col s12 l6 offset-l3">
+                <form class="myform" name="id" onsubmit="submitted(event)">
+                    <h4 class="center-align white-text">INGRESE SU NOMBRE USUARIO</h4>
+
+                    <div class="input-field">
+                        <i class="material-icons white-text prefix">account_box</i>
+                        <input type="text" class="white-text" id="name">
+                        <label for="name">Tu nombre</label>
+                    </div>
+                    <div id="selectionText">Has seleccionado: NONE</div>
+                    <div class="radiowrapper">
+                        <button id="GEOGRAFIA" class="waves-effect waves-light btn"
+                            onclick="updateText('geografia')">GEOGRAFIA</button>
+                        <button id="VIDEOJUEGOS" class="waves-effect waves-light btn"
+                            onclick="updateText('videojuegos')">VIDEOJUEGOS</button>
+                        <button id="ARTE" class="waves-effect waves-light btn"
+                            onclick="updateText('arte')">ARTE</button>
+                        <button id="ALIMENTOS" class="waves-effect waves-light btn"
+                            onclick="updateText('alimentos')">ALIMENTOS</button>
+                    </div>
+                    <div>
+                        <p class="white-text green">REGLAS DE LA PRUEBA:</p>
+                        <p class="black-text white ">1. LAS PREGUNTAS NO SE PUEDEN SALTAR</p>
+                        <p class="black-text white ">2. NO PUEDES IR A LA PREGUNTA ANTERIOR</p>
+                        <p class="black-text white ">3. NO COPIES</p>
+                        <P class="black-text white ">4. DIVERTIRSE </p>
+                    </div>
+
+                    <div class="progress yellow">
+                        <div class="indeterminate"></div>
+                    </div>
+                    <div id="buttons">
+                        <button id="startbutton" class="waves-effect waves-light btn"
+                            onclick="sendLoginRequest()">Start!</button>
+
+                        <button id="scoreboardbutton" class="waves-effect waves-light btn"
+                            onclick="goToScoreboard()">Scoreboard</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        function submitted(e) {
+            e.preventDefault();
+
+            let namee = document.forms["id"]["name"].value;
+            sessionStorage.setItem("name", namee);
+        }
+
+        function goToScoreboard() {
+            window.location.href = "./Scoreboard/html/scoreboard.html";
+        }
+    </script>
+
+</body>
+
+</html>

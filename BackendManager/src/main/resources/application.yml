@@ -1,0 +1,24 @@
+server:
+  address: 217.182.253.177
+  port: 8085
+spring:
+  datasource:
+    url: jdbc:postgresql://217.182.253.177:5432/psqldb
+    username: postgres
+    password: 3003
+  data:
+    mongodb:
+      host: 217.182.253.177
+      port: 27017
+      database: mongodatabase
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  main:
+    web-application-type: servlet
+    allow-bean-definition-overriding: true

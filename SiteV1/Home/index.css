@@ -1,0 +1,29 @@
+body{
+    background-image: url(./assets/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+#selectionText{
+    display: flex;
+    justify-content: center;
+    color:white;
+}
+
+.radiowrapper{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 8px;
+    justify-content: center;
+    gap: 10px;
+}
+
+#startbutton{
+    align-self: center;
+}
+
+P{
+    padding: 8px;
+}

@@ -1,0 +1,30 @@
+body{
+    background-image: url(../assets/bg.jpg);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 9vw;
+    padding-right: 9vw;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#table {
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4vh;
+}
